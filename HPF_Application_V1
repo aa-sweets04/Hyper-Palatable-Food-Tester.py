@@ -1,0 +1,58 @@
+#Hyper Patable Food Application 
+
+def main():
+    print("HPF_Application_V1")
+    print("Enter nutritional information:")
+
+    try: 
+        fat_g = float(input("Fat (g): "))
+        sugar_g = float(input("Sugar (g): "))
+        carb_g = float(input("Carbohydrates (g): "))
+        sodium_mg = float(input("Sodium (mg): "))
+        total_weight_g = float(input("Total Weight (g): "))
+        total_kcal = float(input("Total Calories (kcal): "))
+    except ValueError:
+        print("Invalid input. Please enter numbers only.")
+        return
+
+#kcal to gram conversion
+    fat_kcal = fat_g * 9
+    sugar_kcal = sugar_g * 4
+    carb_kcal = carb_g * 4
+
+#nuritional percentage calculation
+    pct_fat_kcal = (fat_kcal / total_kcal) 
+    pct_sugar_kcal = (sugar_kcal / total_kcal) 
+    pct_carb_kcal = (carb_kcal / total_kcal) 
+
+#sodium percentage calculation
+#sodium is measured in mg, converting to g for percentage calculation
+    sodium_g = sodium_mg / 1000
+    pct_sodium_weight = (sodium_g / total_weight_g) 
+
+
+    print("\n--- Calculated Metrics ---")
+    print(f"Fat: {pct_fat_kcal:.1%} of calories")
+    print(f"Sugar: {pct_sugar_kcal:.1%} of calories")
+    print(f"Carbs: {pct_carb_kcal:.1%} of calories")
+    print(f"Sodium: {pct_sodium_weight:.2%} of weight")
+    print("-" * 25)
+
+#HPF logic
+    is_hp = False
+
+    if pct_fat_kcal > 0.25 and pct_sodium_weight >= 0.003:
+        print("RESULT: HYPERALATABLE FOOD (Fat and Sodium cluster)")
+        is_hp = True
+    elif pct_fat_kcal > 0.20 and pct_sugar_kcal > 0.20:
+        print("RESULT: HYPERALATABLE FOOD (Fat and Sugar cluster)")
+        is_hp = True
+    elif pct_carb_kcal > 0.40 and pct_sodium_weight > 0.002:
+        print("RESULT: HYPERALATABLE FOOD (Carbohydrates and Sodium cluster)")
+        is_hp = True
+
+    if not is_hp:
+        print("RESULT: NOT A HYPERALATABLE FOOD")
+
+if __name__ == "__main__":
+    main()
