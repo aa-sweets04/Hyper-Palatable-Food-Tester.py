@@ -28,7 +28,7 @@ Fazzino et al. (2019) developed the first quantitative definition of HPF, identi
 Nutritional data is fetched live from [Open Food Facts](https://world.openfoodfacts.org/), a free and open food product database maintained by volunteers. Not all products will be available, particularly regional or store-brand items.
 
 ## To Do
-- Connect the application to import HP information in a SQL database
+- ~~Connect the application to import HP information in a SQL database~~
 - Rework current interface
 - Transition to full web application
 
