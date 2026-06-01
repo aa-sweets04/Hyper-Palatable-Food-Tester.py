@@ -1,1 +1,14 @@
+# Databases
 food_history.db
+
+# Python system/cache folders
+__pycache__/
+*.pyc
+
+# Old versions & local scratchpad test scripts
+HPF_Application_V1.py
+barcode_test.py
+db_select.py
+db_setup.py
+test.py
+HPF_Scanner.py
