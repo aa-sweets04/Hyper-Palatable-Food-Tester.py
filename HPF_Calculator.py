@@ -1,3 +1,6 @@
+# This is a alternative to using the HPF bar code scanner.
+# It allows users to input nutritional values manually and get a HP classification within the terminal.
+
 def check_hyperpalatable(fat_g, sugar_g, carb_g, sodium_mg, fiber_g,
                           energy_kcal, total_weight_g):
     """
