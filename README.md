@@ -30,7 +30,6 @@ Nutritional data is fetched live from [Open Food Facts](https://world.openfoodfa
 ## To Do
 - ~~Connect the application to import HP information in a SQL database~~
 - Rework current interface
-- Transition to full web application
 
 ## References 
 Fazzino, T. L., Rohde, K., & Sullivan, D. K. (2019). Hyper-Palatable Foods: Development of a Quantitative Definition and Application to the US Food System Database. Obesity, 27(11), 1761–1768.
